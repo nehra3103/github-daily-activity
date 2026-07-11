@@ -1,7 +1,9 @@
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
-today = datetime.utcnow().strftime("%Y-%m-%d")
+# Use Indian Standard Time
+today = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d")
 
 knowledge = Path("knowledge")
 knowledge.mkdir(exist_ok=True)
