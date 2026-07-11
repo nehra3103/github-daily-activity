@@ -1,0 +1,14 @@
+name: Daily Activity
+
+on:
+  schedule:
+    - cron: '0 18 * * *'   # Runs daily at 6:00 PM UTC (11:30 PM IST)
+  workflow_dispatch:
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
